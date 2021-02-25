@@ -1,0 +1,15 @@
+PROCEDURE selection_sort(VAR tab : ARRAY_OF INTEGER)
+VAR
+   i,j,tmp,n : INTEGER;
+BEGIN
+   n := tab.length;
+   FOR i FROM 0 TO n-2 STEP 1  DO
+       tmp := i;
+       FOR j  FROM 0  TO n-i-2 STEP 1  DO
+           IF (tab[j]>tab[tmp]) THEN
+               tmp := j;
+           END_IF
+       END_FOR
+   swap(arr[tmp],arr[i])
+   END_FOR
+END
